@@ -137,13 +137,13 @@ func StartFetchers() {
 	go func() {
 		for {
 			FetchTreasury()
-			time.Sleep(10 * time.Millisecond)
+			time.Sleep(250 * time.Millisecond)
 		}
 	}()
 	go func() {
 		for {
 			FetchUsdIdr()
-			time.Sleep(200 * time.Millisecond)
+			time.Sleep(350 * time.Millisecond)
 		}
 	}()
 	go func() {
@@ -348,3 +348,4 @@ func formatDuration(totalMinutes int) string {
 	}
 	return fmt.Sprintf("%d jam %d menit", hours, minutes)
 }
+
